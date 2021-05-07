@@ -13,29 +13,24 @@ h1 {
     text-align: center;
     color: white;
     font-weight: 550;
-    font-size: 5vw;
+    font-size: 5.5rem;
 }
 h2 {
     color: white;
     text-align: center;
-    font-size: 2.5vw;
-    padding-top: 10px;
+	font-size: 3rem;
+    padding-top: 3%;
 }
 a {
     color: powderblue;
 }
 
 .file-upload {
-    border: 1px solid white;
-    border-radius: 20px;
+    border: 7px solid white;
+	border-radius: 70px;
     background-color: rgba(0, 0, 0);
-    width: 300px;
-    margin: 0 auto;
-	margin-top:30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 10% 13%;
+    padding: 3% 5%;
 }
 
 .file-upload-content {
@@ -68,7 +63,8 @@ a {
     height: 35px;
     border-radius: 35px;
     text-align: center;
-    margin: 10px auto;
+    margin: auto;
+    margin-top: 5%;
     font-size: 10px;
     vertical-align: middle;
     line-height: 35px;
@@ -91,24 +87,16 @@ a {
 }
 
 .drag-text {
-    font-weight: 100;
-    text-transform: uppercase;
+	text-transform: uppercase;
     color: white;
-    padding-top: 150px;
-    padding-bottom: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 50%;
     text-align: center;
-    font-size: 19px;
+    font-size: 2.7rem;
     font-weight: 550;
 }
 #NEVERSAVE {
-    font-size: 11px;
-    padding-top: 150px;
-    padding-bottom: 10px;
-    font-size: 1.3vw;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 1.8rem;
+    padding-bottom: 5%;
 }
 
 .file-upload-image {
@@ -164,13 +152,7 @@ a {
 .progress-bar{
 	color:black;
 }
-@media (max-width: 800px) {
-    h1 {
-        font-weight: border;
-    }
-    .drag-text {
-        font-size: 2vw;
-    }
+@media (min-width: 800px) {
 }
 
 .at-resp-share-element {
