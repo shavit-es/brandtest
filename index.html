@@ -148,10 +148,12 @@
                 const prediction = await model.predict(image, false);
                 prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
                 var title =
-                    "<div class='result-brand'> 당신은 " +
+                    "<div class='result-brand'>당신은 " +
                     prediction[0].className +
                     ' 스타일!</div>';
-                $('.result-message').html(title);
+				var branddescdictionary={'구찌': '창업자 "구찌오 구찌"의 앞글자를 따서 G두개를 겹쳐놓은 모양을 로고로 한 구찌는 가죽 제품 가게로 시작하여 현재 세계적인 셀럽들이 즐겨입는 브랜드가 되었습니다.', '디올':'프랑스의 패션 디자이너 크리스챤 디올이 설립한 명품브랜드 디올은 2차 세계대전 이후 화려하고 여성적인 옷으로 "NEW LOOK"이라는 수식어와 함께 세계적인 명성을 가지게 된 브랜드입니다.'};
+				var branddesc = "<div class='result-branddesc'>" + branddescdictionary[prediction[0].className] +'</div>';
+                $('.result-message').html(title + branddesc);
                 for (let i = 0; i < maxPredictions; i++) {
                     if (prediction[i].probability.toFixed(3) > 0.03) {
                         if (prediction[i].probability.toFixed(3) < 0.1) {

@@ -29,7 +29,7 @@ a {
     border: 7px solid white;
 	border-radius: 60px;
     background-color: rgba(0, 0, 0);
-    margin: 10% 13%;
+    margin: 10% 20%;
     padding: 1.5% 3%;
 }
 
@@ -100,8 +100,8 @@ a {
 }
 
 .file-upload-image {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 25rem;
+    max-width: 90%;
     margin: auto;
     padding: 20px;
 }
@@ -137,20 +137,34 @@ a {
 }
 
 .result-brand {
-    font-size: 18px;
+    font-size: 2rem;
     color: white;
     text-align: center;
+	font-weight:700;
+	margin-bottom:5%
+}
+.result-branddesc{
+	font-size:1rem;
+	text-align:center;
+	font-weight:500;
+	color:lightyellow;
 }
 .result-brands{
+	font-size:1.3rem;
 	text-align:left;
-	color:white;
-	font-weight:border;
+	color:lightpink;
+	font-weight:700;
 }
 .progress{
 	margin:2px;
+	height:1.5rem;
+	font-size:1.2rem;
+	font-weight:700;
 }
 .progress-bar{
 	color:black;
+	font-size:1.2rem;
+	font-weight:700;
 }
 
 .at-resp-share-element {
