@@ -64,7 +64,7 @@
 					AI가 당신의 패션을 분석 중입니다..
 				</div>
                 <p class="result-message"></p>
-                <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <div id="label-container"></div>
                 <div class="image-title-wrap">
                     <button type="button" onclick="removeUpload()" class="remove-image">
                         다른 사진으로 다시하기
@@ -157,7 +157,6 @@
                     prediction[0].className +
                     ' 스타일!</div>';
 				var branddescdictionary={'구찌': '창업자 "구찌오 구찌"의 앞글자를 따서 G두개를 겹쳐놓은 모양을 로고로 한 구찌는 가죽 제품 가게로 시작하여 현재 세계적인 셀럽들이 즐겨입는 브랜드가 되었습니다.', '디올':'프랑스의 패션 디자이너 크리스챤 디올이 설립한 명품브랜드 디올은 2차 세계대전 이후 화려하고 여성적인 옷으로 "NEW LOOK"이라는 수식어와 함께 세계적인 명성을 가지게 된 브랜드입니다.', '루이비통': '여행용 트렁크를 만들던 창업자 "루이 비통"이 1854년에 자기 이름을 걸고 처음 창업하게 되어 시작한 브랜드 루이비통은 가방에 전통이 깊으며 세계 브랜드가치 1위를 다투는 브랜드입니다.'};
-				var brandclassdictionary={'구찌': 'guc', '디올':'dio', '루이비통':'lou'}
 				var branddesc = "<div class='result-branddesc'>" + branddescdictionary[prediction[0].className] +'</div>';
                 $('.result-message').html(title + branddesc);
                 for (let i = 0; i < maxPredictions; i++) {
@@ -166,13 +165,29 @@
                             var ratio = prediction[i].probability.toFixed(3) * 100;
                             ratio = Math.floor(ratio);
                             const percentbar =
-								'<div class="d-flex"><div class="result-brands d-flex">'+prediction[i].className+'</div><div class="bar-container position-relative container"><div class="'+brandclassdictionary[prediction[i].className]+'-box"></div><div class="d-flex justify-content-center align-items-center '+brandclassdictionary[prediction[i].className]+'-bar" style="width: '+ratio+'%"><span class="d-block percent-text">'+ratio+'%</span></div></div></div></div>';
+                                '<div class="result-brands">' +
+                                prediction[i].className +
+                                '</div><div class="progress"><div class="progress-bar progress-bar-animated bg-warning" role="progressbar" style="width: ' +
+                                ratio +
+                                '%;" aria-valuenow="' +
+                                ratio +
+                                '" aria-valuemin="0" aria-valuemax="100"></div>' +
+                                ratio +
+                                '%</div>';
                             $('#label-container').append(percentbar);
                         } else {
                             var ratio = prediction[i].probability.toFixed(3) * 100;
                             ratio = Math.floor(ratio);
-                           const percentbar =
-								'<div class="d-flex"><div class="result-brands d-flex">'+prediction[i].className+'</div><div class="bar-container position-relative container"><div class="'+brandclassdictionary[prediction[i].className]+'-box"></div><div class="d-flex justify-content-center align-items-center '+brandclassdictionary[prediction[i].className]+'-bar" style="width: '+ratio+'%"><span class="d-block percent-text">'+ratio+'%</span></div></div></div></div>';
+                            const percentbar =
+                                '<div class="result-brands">' +
+                                prediction[i].className +
+                                '</div><div class="progress"><div class="progress-bar progress-bar-animated bg-warning" role="progressbar" style="width: ' +
+                                ratio +
+                                '%;" aria-valuenow="' +
+                                ratio +
+                                '" aria-valuemin="0" aria-valuemax="100">' +
+                                ratio +
+                                '%</div></div>';
                             $('#label-container').append(percentbar);
                         }
                     }
@@ -188,7 +203,9 @@
         ></script>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div class="addthis_inline_share_toolbox_ktgm m-3"></div>
-		
+
+        <div class="ad-banner">
+		</div>
     </body>
     <!-- image upload Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR) -->
 </html>

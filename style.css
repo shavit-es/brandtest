@@ -1,5 +1,5 @@
-discription{
-	display:none;
+discription {
+    display: none;
 }
 body {
     font-family: sans-serif;
@@ -18,7 +18,7 @@ h1 {
 h2 {
     color: white;
     text-align: center;
-	font-size: 2.5rem;
+    font-size: 2.5rem;
     padding-top: 3%;
 }
 a {
@@ -27,17 +27,17 @@ a {
 
 .file-upload {
     border: 7px solid white;
-	border-radius: 60px;
+    border-radius: 60px;
     background-color: rgba(0, 0, 0);
-    margin: 10% 20%;
+    margin: 5% 10%;
     padding: 1.5% 3%;
 }
 
 .file-upload-content {
-	border: 1px solid white;
+    border: 1px solid white;
     border-radius: 20px;
-	margin: 0 auto;
-	margin-top:30px;
+    margin: 0 auto;
+    margin-top: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
@@ -70,6 +70,10 @@ a {
     line-height: 35px;
 }
 
+.loading {
+    color: white;
+    font-size: 1rem;
+}
 .image-upload-wrap {
     margin-top: 20px;
     border: 1px solid white;
@@ -87,7 +91,7 @@ a {
 }
 
 .drag-text {
-	text-transform: uppercase;
+    text-transform: uppercase;
     color: white;
     padding-top: 50%;
     text-align: center;
@@ -100,7 +104,7 @@ a {
 }
 
 .file-upload-image {
-    max-height: 25rem;
+    max-height: 30rem;
     max-width: 90%;
     margin: auto;
     padding: 20px;
@@ -108,24 +112,23 @@ a {
 
 .remove-image {
     width: 200px;
-    margin: 0;
-    color: #fff;
-    background: #cd4535;
+    color: black;
+    background: #939393;
     border: none;
     padding: 10px;
     border-radius: 4px;
-    border-bottom: 4px solid #b02818;
+    border-bottom: 4px solid #777777;
     transition: all 0.2s ease;
     outline: none;
     text-transform: uppercase;
     font-weight: 700;
-	text-align:center;
-	margin-top:20px;
+    text-align: center;
+    margin: 5%;
 }
 
 .remove-image:hover {
-    background: #c13b2a;
-    color: #ffffff;
+    background: #696969;
+    color: white;
     transition: all 0.2s ease;
     cursor: pointer;
 }
@@ -133,107 +136,148 @@ a {
 .remove-image:active {
     border: 0;
     transition: all 0.2s ease;
-
 }
 
 .result-brand {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     text-align: center;
-	font-weight:700;
-	margin-bottom:5%
+    font-weight: 700;
+    margin-bottom: 5%;
 }
-.result-branddesc{
-	font-size:1rem;
-	text-align:center;
-	font-weight:500;
-	color:lightyellow;
-}
-.result-brands{
-	font-size:1.3rem;
-	text-align:left;
-	color:lightpink;
-	font-weight:700;
-}
-.progress{
-	margin:2px;
-	height:1.5rem;
-	font-size:1.2rem;
-	font-weight:700;
-}
-.progress-bar{
-	color:black;
-	font-size:1.2rem;
-	font-weight:700;
-}
-
-.at-resp-share-element {
+.result-branddesc {
+    font-size: 1.8rem;
     text-align: center;
+    font-weight: 500;
+    color: lightyellow;
+}
+#result-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.bar-container {
+    height: 2.7rem;
+}
+.guc-box {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: red;
+}
+.guc-bar {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: orange;
+}
+.lou-box {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: brown;
+}
+.lou-bar {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: black;
+}
+.percent-text {
+    font-size: 1rem;
+    color: white;
+}
+.result-brands {
+    font-size: 1.9rem;
+    text-align: left;
+    color: white;
+    font-weight: 700;
+    width: 30%;
+    height: 2rem;
+}
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
 }
 
-.ad-banner{
-	width:320px;
-	margin:0 auto;
-}
+@media (orientation: landscape) {
+    h1 {
+        font-size: 3rem;
+        margin-top: 3%;
+    }
+    h2 {
+        font-size: 1.5rem;
+        padding-top: 1.5%;
+    }
+    .file-upload {
+        padding: 0% 1.5% 1% 1.5%;
+        margin: 3% 25%;
+        border-radius: 40px;
+    }
+    .drag-text {
+        padding-top: 25%;
+        font-size: 1.3rem;
+    }
+    #NEVERSAVE {
+        font-size: 1rem;
+        padding-top: 30%;
+    }
+    .result-brand {
+        font-size: 1.3rem;
+        margin-bottom: 3%;
+    }
+    .result-branddesc {
+        font-size: 0.8rem;
+    }
+    .result-brands {
+        font-size: 0.8rem;
+    }
 
-@media (min-width: 1000px) {
-	h1{
-		font-size:4rem;
-		margin-top:120px;
-	}
-	h2{
-		font-size: 2rem;
-		padding-top: 2.5%;
-	}
-	.file-upload {
-	padding: 1% 2.5% 2% 2.5%;
-    margin: 5% 20%;
-    border-radius: 50px;
-	}
-		.drag-text {
-    padding-top: 40%;
-    font-size: 2rem;
-	}
+    .file-upload-image {
+        max-height: 18rem;
+        max-width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+    .home-button {
+        margin-top: 2%;
+    }
 }
-
-@media (min-width: 1300px) {
-	h1{
-		font-size:3rem;
-		margin-top:90px;
-	}
-	h2{
-		font-size: 1.5rem;
-		padding-top: 2%;
-	}
-	.file-upload {
-    padding: 1% 2% 2% 2%;
-    margin: 3% 25%;
-	}
-	
-	.drag-text {
-    padding-top: 30%;
-    font-size: 2rem;
-	}
-}
-
 @media (max-width: 714px) {
-	h1{
-		font-size:3rem;
-		margin-top:90px;
-	}
-	h2{
-		font-size: 1.5rem;
-		padding-top: 2%;
-	}
-	.file-upload {
-    margin: 6% 8%;
-    padding: 1.5% 3%;
-	}
-		.drag-text {
-    padding-top: 30%;
-    font-size: 1.5rem;
-	}
-	#NEVERSAVE{
-		font-size:1rem;
-	}
+    h1 {
+        font-size: 3rem;
+        margin-top: 90px;
+    }
+    h2 {
+        font-size: 1.5rem;
+        padding-top: 2%;
+    }
+    .file-upload {
+        margin: 6% 8%;
+        padding: 1.5% 3%;
+    }
+    .drag-text {
+        padding-top: 30%;
+        font-size: 1.5rem;
+    }
+    #NEVERSAVE {
+        font-size: 1rem;
+    }
 }
