@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    margin-top: 150px;
+    margin-top: 10%;
     text-align: center;
     color: white;
     font-weight: 550;
@@ -29,7 +29,7 @@ a {
     border: 7px solid white;
     border-radius: 60px;
     background-color: rgba(0, 0, 0);
-    margin: 5% 10%;
+    margin: 5% 15%;
     padding: 1.5% 3%;
 }
 
@@ -72,7 +72,7 @@ a {
 
 .loading {
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 .image-upload-wrap {
     margin-top: 20px;
@@ -146,15 +146,24 @@ a {
     margin-bottom: 5%;
 }
 .result-branddesc {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     text-align: center;
     font-weight: 500;
     color: lightyellow;
+    margin: 0 5% 0 5%;
+}
+.result-brands {
+    font-size: 1.9rem;
+    text-align: left;
+    color: white;
+    font-weight: 700;
+    width: 35%;
+    height: 2rem;
 }
 #result-container {
     width: 80%;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 .container {
     width: 100%;
@@ -166,55 +175,112 @@ a {
 .bar-container {
     height: 2.7rem;
 }
-.guc-box {
+.brandboxes {
     position: absolute;
     top: 7px;
     left: 0;
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: red;
 }
-.guc-bar {
+.brandbars {
     position: absolute;
     top: 7px;
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: orange;
 }
-.lou-box {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
+.brandtexts {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+#guc-box {
+    background-color: #ed1c24;
+}
+#guc-bar {
+    background-color: #024429;
+}
+#guc-text {
+    color: #bd9302;
+}
+#dio-box {
+    background-color: #b27e80;
+}
+#dio-bar {
+    background-color: #d6bab9;
+}
+#dio-text {
+    color: #261540;
+}
+#lou-box {
     background-color: brown;
 }
-.lou-bar {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
+#lou-bar {
     background-color: black;
 }
-.percent-text {
-    font-size: 1rem;
+#lou-text {
     color: white;
 }
-.result-brands {
-    font-size: 1.9rem;
-    text-align: left;
-    color: white;
-    font-weight: 700;
-    width: 30%;
-    height: 2rem;
+#bal-box {
+    background-color: #078f73;
+}
+#bal-bar {
+    background-color: #07bf9f;
+}
+#bal-text {
+    color: #f3cfa6;
+}
+#vln-box {
+    background-color: #5d2b37;
+}
+#vln-bar {
+    background-color: #9d3d25;
+}
+#vln-text {
+    color: #e2e6e9;
+}
+#cha-box {
+    background-color: #ff6e6e;
+}
+#cha-bar {
+    background-color: #ffa49e;
+}
+#cha-text {
+    color: #3e3e3e;
+}
+#fen-box {
+    background-color: #dccdbd;
+}
+#fen-bar {
+    background-color: #ffeacf;
+}
+#fen-text {
+    color: #4e4d57;
+}
+#her-box {
+    background-color: #fd6f28;
+}
+#her-bar {
+    background-color: #f9e840;
+}
+#her-text {
+    color: #071a76;
+}
+#pra-box {
+    background-color: #A43E30;
+}
+#pra-bar {
+    background-color: #FF8777;
+}
+#pra-text {
+    color: black;
 }
 .ad-banner {
     width: 320px;
     margin: 0 auto;
+}
+.at-resp-share-element {
+	text-align: center;
 }
 
 @media (orientation: landscape) {
