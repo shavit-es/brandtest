@@ -191,7 +191,7 @@ a {
     border-radius: 10px;
 }
 .brandtexts {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 #guc-box {
@@ -213,13 +213,13 @@ a {
     color: #261540;
 }
 #lou-box {
-    background-color: brown;
+    background-color: #362B18;
 }
 #lou-bar {
-    background-color: black;
+    background-color: #9F8453;
 }
 #lou-text {
-    color: white;
+    color: #DED039;
 }
 #bal-box {
     background-color: #078f73;
@@ -275,6 +275,25 @@ a {
 #pra-text {
     color: black;
 }
+#bur-box {
+    background-color: #513819;
+}
+#bur-bar {
+    background-color: #956226;
+}
+#bur-text {
+    color: #E6D4AE;
+}
+#giv-box {
+    background-color: #DF492F;
+}
+#giv-bar {
+    background-color: #E7CE22;
+}
+#giv-text {
+    color: #FF8FB0;
+}
+
 .ad-banner {
     width: 320px;
     margin: 0 auto;
