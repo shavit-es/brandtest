@@ -122,6 +122,7 @@
                 $('.coupangbanner').empty();
                 $('.file-upload-content').hide();
                 $('.image-upload-wrap').show();
+				maxbrandwidth=0;
             }
             $('.image-upload-wrap').bind('dragover', function () {
                 $('.image-upload-wrap').addClass('image-dropping');
@@ -193,8 +194,8 @@
                 프라다:
                     '쿠팡에서 프라다 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487624&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
             };
+			var maxbrandwidth=0;
             const URL = "https://teachablemachine.withgoogle.com/models/Su4juZ5yN/";
-
             let model, webcam, labelContainer, maxPredictions;
 
             // Load the image model and setup the webcam
@@ -250,12 +251,15 @@
                             ratio +
                             '%</span></div></div></div></div>';
                         $('#label-container').append(percentbar);
-                        //$('.coupangbanner').append(coupangsrcdic[prediction[0].className]);//
-                    }
+                        if (String(prediction[i].className).length>maxbrandwidth){
+							maxbrandwidth=String(prediction[i].className.length*7)+'%';
+						}
+					}
                 }
+				$('.result-brands').css({'width':maxbrandwidth});
                 $('.coupangbanner').append(coupangsrcdic[prediction[0].className]);
                 $('.coupangbanner').show();
-            }
+			}
         </script>
         <script src="https://ads-partners.coupang.com/g.js"></script>
         <script
