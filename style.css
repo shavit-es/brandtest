@@ -146,7 +146,7 @@ a {
     margin-bottom: 5%;
 }
 .result-branddesc {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     text-align: center;
     font-weight: 500;
     color: lightyellow;
@@ -294,14 +294,13 @@ a {
     color: #FF8FB0;
 }
 
-.ad-banner {
-    width: 320px;
-    margin: 0 auto;
-}
 .at-resp-share-element {
 	text-align: center;
 }
-
+.coupangbanner{
+	font-size:1.5rem;
+	color:white;
+}
 @media (orientation: landscape) {
     h1 {
         font-size: 3rem;

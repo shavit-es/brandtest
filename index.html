@@ -26,10 +26,13 @@
                 dataLayer.push(arguments);
             }
             gtag('js', new Date());
-
             gtag('config', 'G-2BE0CN285J');
         </script>
-		<script data-ad-client="ca-pub-5433204869198862" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script
+            data-ad-client="ca-pub-5433204869198862"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
@@ -43,7 +46,6 @@
     <body>
         <h1 class="titlebrand">명품 브랜드 테스트</h1>
         <h2 class="subtitle">나의 패션은 어떤 명품 스타일일까?</h2>
-
         <script
             class="jsbin"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
@@ -97,10 +99,8 @@
 
                     reader.onload = function (e) {
                         $('.image-upload-wrap').hide();
-
                         $('.file-upload-image').attr('src', e.target.result);
                         $('.file-upload-content').show();
-
                         $('.image-title').html(input.files[0].name);
                     };
 
@@ -119,6 +119,7 @@
                 $('.file-upload-input').replaceWith($('.file-upload-input').clone());
                 $('.result-message').empty();
                 $('#label-container').empty();
+                $('.coupangbanner').empty();
                 $('.file-upload-content').hide();
                 $('.image-upload-wrap').show();
             }
@@ -134,6 +135,64 @@
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
             // the link to your model provided by Teachable Machine export panel
+
+            var branddescdictionary = {
+                구찌:
+                    '창업자 "구찌오 구찌"의 앞글자를 따서 G두개를 겹쳐놓은 모양을 로고로 한 구찌는 가죽 제품 가게로 시작하여 현재 세계적인 셀럽들이 즐겨입는 브랜드가 되었다.',
+                디올:
+                    '프랑스의 패션 디자이너 크리스챤 디올이 설립한 명품브랜드 디올은 2차 세계대전 이후 화려하고 여성적인 옷으로 "NEW LOOK"이라는 수식어와 함께 세계적인 명성을 가지게 된 브랜드이다.',
+                루이비통:
+                    '여행용 트렁크를 만들던 창업자 "루이 비통"이 1854년에 자기 이름을 걸고 처음 창업하게 되어 시작한 브랜드 루이비통은 가방에 전통이 깊으며 세계 브랜드가치 1위를 다투는 브랜드이다.',
+                발렌시아가:
+                    '구상, 재단, 봉재, 수선에 이르기까지 모든 의상 제작 과정을 해낼 수 있었던 천재 디자이너 "크리스토발 발렌시아가"가 창업한 브랜드 발렌시아가는 최근 몇 년간 신발로써 세계의 유행을 주도하기도 한 브랜드이다.',
+                발렌티노:
+                    '이탈리아 출신의 창업자 "발렌티노 가라바니"가 설립한 발렌티노는 화이트 컬렉션, 여성들의 드레스 등으로 명성을 얻었다.  발렌티노의 특징으로는 시그니처 컬러인 발렌티노 레드를 비롯하여 락스터드, VLTN, V로고 등이 있다.',
+                버버리:
+                    '영국의 악명높은 날씨를 대비하기 위한 실용적인 레인코트로 시작한 브랜드 버버리는 보어 전쟁에서의 군복으로 영국 왕실의 사랑을 받았다. 이후 버버리 코트라고 불리우는 트렌치코트로 명성을 얻었으며 현재는 명품 패션 브랜드로서 자리잡고 있다.',
+                지방시: '"위베르 드 지방시"에 의해 설립된 패션브랜드 지방시는 물론 첫 컬렉션부터 찬사를 받았기도 했지만, 오드리 햅번 드레스 브랜드라는 것을 빼고 이야기할 수 없는 브랜드이다. 원래는 여성복 전문 브랜드였으나 현재는 거대 패션 브랜드가 되었다.',
+                샤넬: '불우한 어린 시절을 보냈던 가브리엘 보뇌르 코코 샤넬의 브랜드 샤넬은 당시 트렌드와는 달리 편안하면서 아름다운 여성복을 통해 성공의 길을 걸었으며, 이후에는 향수로서도 성공하여 현재는 세계 3대 명품 브랜드로 꼽히는 럭셔리 브랜드입니다.',
+                펜디: '모피와 가죽제품 판매로 시작한 브랜드 펜디는 칼 라거펠트와 함께 모피에 대한 고정관념을 깨고 패셔너블한 아이템으로 만들며 큰 명성을 얻었다. 이 외에도 바게트 백, 피카부 백 등의 가죽제품 또한 많은 사람들의 사랑을 받는다. ',
+                에르메스: '명품 중의 명품이라고 불리는 에르메스. 장인이 기계도 사용하지 않고 최고의 원단으로 직접 만들며 돈만 있다고 살 수 없는 버킨백 등이 유명하다. 세계에서 가장 고급 브랜드로 평가받는다.',
+                프라다:
+                    '마리오 프라다와 마리티노 프라다 형제가 이탈리아 밀라노에서 가죽제품 판매점으로 시작한 프라다는 세계적으로 선풍적인 인기를 끈 나일론 가방 등을 통해서 크게 성장했다. 이후에는 셀럽들에게 패션의 미래를 프라다가 제시한다는 평가를 받으며 유명 명품 브랜드가 되었다.',
+            };
+            var brandclassdictionary = {
+                구찌: 'guc',
+                디올: 'dio',
+                루이비통: 'lou',
+                발렌시아가: 'bal',
+                발렌티노: 'vln',
+                버버리: 'bur',
+                지방시: 'giv',
+                샤넬: 'cha',
+                펜디: 'fen',
+                에르메스: 'her',
+                프라다: 'pra',
+            };
+            var coupangsrcdic = {
+                구찌:
+                    '쿠팡에서 구찌 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487453&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                디올:
+                    '쿠팡에서 디올 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487496&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                루이비통:
+                    '쿠팡에서 루이비통 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487521&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                발렌시아가:
+                    '쿠팡에서 발렌시아가 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487522&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                발렌티노:
+                    '쿠팡에서 발렌티노 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487617&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                버버리:
+                    '쿠팡에서 버버리 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487619&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                지방시:
+                    '쿠팡에서 지방시 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487620&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                샤넬:
+                    '쿠팡에서 샤넬 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487621&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                펜디:
+                    '쿠팡에서 펜디 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487622&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                에르메스:
+                    '쿠팡에서 에르메스 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487623&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+                프라다:
+                    '쿠팡에서 프라다 관련 상품 둘러보기<br><iframe src="https://ads-partners.coupang.com/widgets.html?id=487624&template=carousel&trackingCode=AF8272700&subId=&width=600&height=150" width="600" height="150" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>',
+            };
             const URL = 'https://teachablemachine.withgoogle.com/models/WQfvGevL2/';
 
             let model, webcam, labelContainer, maxPredictions;
@@ -156,7 +215,6 @@
                 }
             }
             // run the webcam image through the image model
-
             async function predict() {
                 $('.spinner-border').hide();
                 $('.loading').hide();
@@ -168,26 +226,6 @@
                     "<div class='result-brand'>당신은 " +
                     prediction[0].className +
                     ' 스타일!</div>';
-                var branddescdictionary = {
-                    구찌:
-                        '창업자 "구찌오 구찌"의 앞글자를 따서 G두개를 겹쳐놓은 모양을 로고로 한 구찌는 가죽 제품 가게로 시작하여 현재 세계적인 셀럽들이 즐겨입는 브랜드가 되었습니다.',
-                    디올:
-                        '프랑스의 패션 디자이너 크리스챤 디올이 설립한 명품브랜드 디올은 2차 세계대전 이후 화려하고 여성적인 옷으로 "NEW LOOK"이라는 수식어와 함께 세계적인 명성을 가지게 된 브랜드입니다.',
-                    루이비통:
-                        '여행용 트렁크를 만들던 창업자 "루이 비통"이 1854년에 자기 이름을 걸고 처음 창업하게 되어 시작한 브랜드 루이비통은 가방에 전통이 깊으며 세계 브랜드가치 1위를 다투는 브랜드입니다.', 발렌시아가: '구상, 재단, 봉재, 수선에 이르기까지 모든 의상 제작 과정을 해낼 수 있었던 천재 디자이너 "크리스토발 발렌시아가"가 창업한 브랜드 발렌시아가는 최근 몇 년간 스피드러너, 트리플s 등의 신발로써 세계의 유행을 주도한 브랜드입니다.', 발렌티노:'이탈리아 출신의 창업자 "발렌티노 가라바니"가 설립한 발렌티노는 화이트 컬렉션, 여성들의 드레스 등으로 명성을 얻었다.  발렌티노의 특징으로는 시그니처 컬러인 발렌티노 레드를 비롯하여 락스터드, VLTN, V로고 등이 있다.' };
-                var brandclassdictionary = {
-                    구찌: 'guc',
-                    디올: 'dio',
-                    루이비통: 'lou',
-                    발렌시아가: 'bal',
-                    발렌티노: 'vln',
-					버버리: 'bur',
-					지방시:'giv',
-                    샤넬: 'cha',
-                    펜디: 'fen',
-                    에르메스: 'her',
-                    프라다: 'pra',
-                };
                 var branddesc =
                     "<div class='result-branddesc'>" +
                     branddescdictionary[prediction[0].className] +
@@ -212,16 +250,21 @@
                             ratio +
                             '%</span></div></div></div></div>';
                         $('#label-container').append(percentbar);
+                        //$('.coupangbanner').append(coupangsrcdic[prediction[0].className]);//
                     }
                 }
+                $('.coupangbanner').append(coupangsrcdic[prediction[0].className]);
+                $('.coupangbanner').show();
             }
         </script>
+        <script src="https://ads-partners.coupang.com/g.js"></script>
         <script
             type="text/javascript"
             src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076afaae3d25100"
         ></script>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div class="addthis_inline_share_toolbox_ktgm m-3"></div>
+        <p class="coupangbanner" align="middle"></p>
     </body>
     <!-- image upload Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR) -->
 </html>
