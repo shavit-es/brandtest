@@ -149,6 +149,7 @@
                 $('.file-upload-content').hide();
                 $('.image-upload-wrap').show();
                 maxbrandwidth = 0;
+				brandwidth=0;
             }
             $('.image-upload-wrap').bind('dragover', function () {
                 $('.image-upload-wrap').addClass('image-dropping');
@@ -198,7 +199,7 @@
                 샤넬: 'cha',
                 펜디: 'fen',
                 에르메스: 'her',
-                프라다: 'pra',
+                프라다: 'pra'
             };
             var coupangsrcdic = {
                 구찌:
@@ -282,11 +283,12 @@
                             '%</span></div></div></div></div>';
                         $('#label-container').append(percentbar);
                         if (String(prediction[i].className).length > maxbrandwidth) {
-                            maxbrandwidth = String(prediction[i].className.length * 7) + '%';
+                            maxbrandwidth = String(prediction[i].className).length;
+							brandwidth=maxbrandwidth*7+'%';
                         }
                     }
                 }
-                $('.result-brands').css({ width: maxbrandwidth });
+                $('.result-brands').css("width", brandwidth);
                 $('.coupangbanner').append(coupangsrcdic[prediction[0].className]);
                 $('.coupangbanner').show();
             }
