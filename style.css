@@ -336,7 +336,8 @@ a {
         font-size: 0.8rem;
     }
     .result-brands {
-        font-size: 0.8rem;
+        font-size: 1.3rem;
+		margin-top:4px;
     }
 
     .file-upload-image {
